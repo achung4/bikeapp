@@ -1,0 +1,2 @@
+serviceClass: com.cpsc310.sc2.client.RouteService
+path: 5029B4D1DD5879AAA217869FAECF4825.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: com.cpsc310.sc2.client.GreetingService
+path: 3D8F9194D3DE5B2279EEFBD0D8DA1FAE.gwt.rpc

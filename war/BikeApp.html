@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="BikeApp.css">
+
+
+    <title>Web Application Starter Project</title>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.7&sensor=false&language=en"></script>
+    <script type="text/javascript" language="javascript" src="bikeapp/bikeapp.nocache.js"></script>
+    <script language=javascript src='http://btn.weather.ca/weatherbuttons/search/120X60.js?cb=201303220853'></script>
+  
+    <style>
+      html { height: 100% }
+      body { height: 100%; margin: 0px; padding: 0px }
+    </style>
+  </head>
+
+  <body>
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+    
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+    <img src="./image/header.png" alt="some_text">
+    <table border="1" align="center" style="position:relative;width:100%;height:80%;">
+  		<tr>
+    		<th style="width:70%; height:70%"><div id="map_canvas"  style="position: relative; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%;"></div></th>
+    		<th style="width:30%; height:70%"><div id="map_options" ></div>
+    		<div id="routeList"></div>
+    		
+    		<table border="1">
+        		<td colspan="4" style="font-weight:bold;">Welcome to Bike App, click [parse] after login to view cycling path:</td>        
+     		</tr>
+      		<tr>
+        		<td id="nameFieldContainer"></td>
+        		<td id="sendButtonContainer"></td>
+        		<td id="anotherButtonContainer"></td>
+        		<td id="parseButtonContainer"></td>
+      		</tr>
+      		<tr>
+        		<td colspan="4" style="color:red;" id="bikeRouteListContainer"></td>
+      		</tr>
+      		<tr>
+			<table border="1" >
+			<tr>
+				<th>PlaceMark ---------- Name -------- Button</th>
+			</tr>
+			<tr>
+				<td>
+      			<div id="scroller">
+      				<div id="parseData"></div>
+    			</div>
+    			</td>
+    		</tr>
+    		</table>
+      		</tr>
+    		</table>
+    		</th>
+  		</tr>
+  	</table>
+	
+    <!--<div id="map_canvas" style="width:750px; height:600px; position:absolute; left:400px"></div>-->
+        
+    <!-- Facebook plugin -->
+    <div id="graphList"></div>
+    <div id="social_media">
+		<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbikeappsc2&amp;width=292&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:290px;" allowTransparency="true"></iframe>
+  		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+  			var js, fjs = d.getElementsByTagName(s)[0];
+  			if (d.getElementById(id)) return;
+  			js = d.createElement(s); js.id = id;
+  			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="fb-comments" data-href="http://joeyxfy.appspot.com" data-width="270" data-num-posts="10"></div>
+
+		<div class="addthis_toolbox addthis_default_style ">
+		<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+		<a class="addthis_button_tweet"></a>
+		<a class="addthis_button_pinterest_pinit"></a>
+		<a class="addthis_counter addthis_pill_style"></a>
+		</div>
+	</div>
+  </body>
+</html>

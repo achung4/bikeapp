@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>favoriteServlet</servlet-name>
+		<servlet-class>com.cpsc310.sc2.server.FavoriteServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>favoriteServlet</servlet-name>
+		<url-pattern>/bikeapp/favorites</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>com.cpsc310.sc2.server.GreetingServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/bikeapp/greet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>routeServlet</servlet-name>
+		<servlet-class>com.cpsc310.sc2.server.RouteServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>routeServlet</servlet-name>
+		<url-pattern>/bikeapp/route</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>BikeApp.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value/>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>loginService</servlet-name>
+		<servlet-class>com.cpsc310.sc2.server.LoginServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>loginService</servlet-name>
+		<url-pattern>/bikeapp/login</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

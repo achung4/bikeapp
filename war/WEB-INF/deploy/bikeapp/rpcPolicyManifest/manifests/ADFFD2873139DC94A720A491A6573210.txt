@@ -1,0 +1,2 @@
+serviceClass: com.cpsc310.sc2.client.FavoriteService
+path: D6E5EFB6E3A6AE61BA816568C0B5818F.gwt.rpc
